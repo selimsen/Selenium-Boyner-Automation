@@ -8,7 +8,7 @@ public class ProductPage extends BasePage{
     By productList = By.xpath("//*[@id='pagedListContainer']/div[4]/div[2]/div");
     By acceptCookies = By.className("cookies-accept");
 
-    By favaddButtonLocator = By.xpath("/html/body/div[1]/div[1]/div/div[1]/div[2]/div[2]/div/label/span");
+    
     public ProductPage(WebDriver driver) {
         super(driver);
     }
@@ -19,9 +19,4 @@ public class ProductPage extends BasePage{
         waitseconds();
         click(acceptCookies);
     }
-    public boolean isProductSelected(){
-        return isDisplayed(favaddButtonLocator);
-    }
-
-
 }
